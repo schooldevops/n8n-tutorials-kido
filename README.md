@@ -4,9 +4,9 @@
 
 ### 01.N8n 소개 및 설치
 
-1. N8n 개요 및 주요 기능
-2. 설치 방법 (클라우드, 로컬)
-3. Quick Start
+1. [N8n 개요 및 주요 기능](./Beginer/01.N8n소개및설치.md#주요-기능)
+2. [설치 방법 (클라우드, 로컬)](./Beginer/01.N8n소개및설치.md#설치-방법-및-라이선스)
+3. [Quick Start](./Beginer/01.N8n소개및설치.md#quick-start)
 
 - 참고: https://docs.n8n.io/hosting/installation/
 

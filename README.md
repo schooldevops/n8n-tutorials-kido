@@ -33,5 +33,50 @@ markdown_content = """
 | 3강 | AI 기반 업무 판단 자동화 | GPT를 이용한 분기 판단 및 실행 흐름 구성 | 조건 분기, 컨텍스트 기반 AI 판단 | [AI 분기 예제](https://community.n8n.io/t/ai-decision-making-with-openai-node/16240) |
 | 4강 | 시스템 로그 분석 및 알림 | 로그 감시 → 이상 탐지 → 슬랙/메일 경고 구성 | 로그 파싱, 텍스트 매칭, 알림 트리거 | [모니터링 예제](https://docs.n8n.io/usage-examples/system-monitoring/) |
 | 5강 | IT 운영 전체 자동화 구성 | 통합 워크플로우로 전사적 업무 자동화 구현 | 오류 처리, 분기 흐름, 멀티 API 연동 | [엔터프라이즈 자동화](https://docs.n8n.io/usage-examples/enterprise-automation/) |
-"""
+
+## n8n에서 제공하는 5가지 모듈
+
+| 모듈 | 특징 | 대표 모듈 | 설명 |
+|------|------|-----------|-------------------|
+| Core | 기본 기능 제공 | HTTP Request, Function, Set | 워크플로우의 기본 구성 요소로, 데이터 처리와 변환을 담당 |
+| Built-in | 내장 통합 기능 | Slack, Gmail, MySQL | 자주 사용되는 서비스와의 통합을 위한 기본 노드 제공 |
+| Community | 커뮤니티 기여 | CSV, PDF, Excel | 사용자들이 개발한 추가 기능과 통합 모듈 |
+| Enterprise | 기업용 기능 | LDAP, SAML, Audit Logs | 기업 환경에서 필요한 보안, 인증, 감사 기능 |
+| Custom | 사용자 정의 | Custom Node, Custom Function | 사용자가 직접 개발하여 추가할 수 있는 커스텀 모듈 |
+
+---
+
+## n8n에서 제공하는 5가지 노드(모듈) 카테고리
+
+| 카테고리      | 특징 및 설명                                                                 | 대표 노드(모듈) 예시                |
+|---------------|-----------------------------------------------------------------------------|--------------------------------------|
+| Triggers      | 자동화의 시작점이 되는 노드. 워크플로우를 시작하게 만드는 역할.              | Webhook Trigger, Cron Trigger, Email Trigger |
+| Actions       | 외부 앱/서비스에서 실제 동작을 수행하는 노드.                               | Google Sheets, Airtable, Notion, Slack, Telegram, Gmail |
+| Utility       | 데이터 변환, 필터, 조건문 등 워크플로우 내 데이터 가공 및 흐름 제어.         | IF, Switch, Merge, Set, SplitInBatches, Wait |
+| Code          | 코드 실행, HTTP 요청, 웹훅 설정 등 고급 기능을 제공하는 노드.                | Function, Function Item, HTTP Request, Code, Execute Command |
+| Advanced AI   | LLM, 검색, 메모리, 체인, 감정 분석 등 AI 기반의 고급 자동화 기능.            | OpenAI, Google Vertex AI, Pinecone, AI Memory, Sentiment Analysis |
+
+### 각 카테고리별 설명 및 대표 노드
+
+1. **Triggers (트리거)**
+   - 워크플로우의 시작점이 되는 노드입니다.
+   - 예시: Webhook Trigger(외부 요청), Cron Trigger(스케줄), Email Trigger(이메일 수신)
+
+2. **Actions (액션)**
+   - 외부 서비스와 연동하여 실제 동작(생성, 조회, 수정 등)을 수행합니다.
+   - 예시: Google Sheets(시트에 데이터 추가), Airtable, Notion, Slack, Telegram, Gmail
+
+3. **Utility (유틸리티)**
+   - 데이터 변환, 조건 분기, 필터링 등 워크플로우 내 데이터 흐름을 제어합니다.
+   - 예시: IF(조건문), Switch(분기), Merge(데이터 합치기), Set(값 설정), SplitInBatches(배치 분할), Wait(대기)
+
+4. **Code (코드)**
+   - JavaScript 코드 실행, HTTP 요청, 웹훅 등 고급 자동화 기능을 제공합니다.
+   - 예시: Function(코드 실행), Function Item(아이템별 코드), HTTP Request(외부 API 호출), Code, Execute Command(명령어 실행)
+
+5. **Advanced AI (고급 AI)**
+   - LLM(대형 언어 모델), 검색, 메모리, 체인, 감정 분석 등 AI 기반의 고급 자동화 기능을 제공합니다.
+   - 예시: OpenAI(GPT), Google Vertex AI, Pinecone(벡터DB), AI Memory, Sentiment Analysis(감정 분석)
+
+---
 
